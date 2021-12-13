@@ -1,7 +1,6 @@
 # traffic-sign-recognition
 ### Video link: https://pro.panopto.com/Panopto/Pages/Viewer.aspx?tid=a10141be-2378-4b58-91a3-adfd004aa025
 
-<h3> Traffic Sign Recognition </h3>
 </br>
 <h5> Description </h5>
 Traffic sign recongnition is a system used in self driving cars and driving assistance systems for automatic detection of various traffic signs and act or guide according to the sign</br>
