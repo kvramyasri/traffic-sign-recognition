@@ -1,0 +1,42 @@
+{% extends "base.html" %} {% block content %}
+ 
+<h2>Choose an Image File</h2>
+<div class="container">
+  <div class="row">
+    <div class="col sm">
+   <form id="upload-file" method="post" enctype="multipart/form-data">
+       <label for="imageUpload" class="upload-label">
+          Upload
+       </label>
+       <input type="file" name="file" id="imageUpload" onchange="loadFile(event)",accept=".png, .jpg, .jpeg">
+              <!-- <div class="img-preview" > -->
+                   <p ><img id="output" width="400"/></p>
+               <!-- </div> -->
+              <br/>
+          </div>
+           <div class="col-sm">
+            <div >
+              <br/>
+              <button class="btn btn-primary" type="submit" name="classify" value="classify">Classify</button>
+          </div>
+          <br/>
+          <div >{{result}}</div>
+          <br/>
+           <div >
+               <button class="btn btn-primary" type="submit" name="play" value="play">Play</button>
+               </br>
+               <label for="language">Choose Language:</label>
+               <select name="language" id="language">
+               <option value="hi">Hindi</option>
+               <option value="es">Spanish</option>
+               <option value="pt">Portuguese</option>
+               <option value="zh">Chinese</option>
+               </select>
+               <button class="btn btn-primary" type="submit" name="translate" value="translate">Translate</button>
+               <div>{{translation}}</div>
+           </div>
+          </div>
+   </form>
+  </div>
+</div>
+{% endblock %}

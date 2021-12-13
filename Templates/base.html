@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Traffic Sign Recognition</title>
+    <link
+      href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+    </script>
+    <style type="text/css">
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .img-preview {
+        width: 256px;
+        height: 256px;
+        position: relative;
+        border: 5px solid #f8f8f8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      .img-preview > div {
+        width: 256px;
+        height: 256px;
+        background-size: 256px 256px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #imagePreview {
+        width: 50%;
+        float: left;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      .upload-label {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #017de9;
+        color: #fff;
+        font-size: 1em;
+        transition: all 0.4s;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#"><h1>Traffic Sign Recognition</h1></a>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="content" style="margin-top: 2em">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
